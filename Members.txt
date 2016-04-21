@@ -6,16 +6,10 @@ Sudharsan Murali
  
 Van Nguyen
 
-<<<<<<< HEAD
-Gautam Ramakrishnan
+Gautam Ramakrishnan (iceb3rgslim)
 
 hello
 
 sudharsan
-=======
-Gautam Ramakrishnan (iceb3rgslim)
->>>>>>> origin/master
-
-hi
 
 
