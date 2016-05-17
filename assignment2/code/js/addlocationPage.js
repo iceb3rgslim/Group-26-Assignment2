@@ -1,9 +1,41 @@
 // Code for the Add Location page.
-var map;
-        function initMap() 
-        {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: -37.9120467, lng: 145.1343136},
-                zoom: 17
-            });
-        }
+
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 8,
+    center: {lat: -37.876823, lng: 145.045837}
+  });
+  var geocoder = new google.maps.Geocoder();
+
+  document.getElementById('locationButton').addEventListener('click', function() {
+    geocodeAddress(geocoder, map);
+  });
+    
+
+    function geocodeAddress(geocoder, resultsMap) {
+        var address = document.getElementById('pac-input').value;
+        geocoder.geocode({'address': address}, function(results, status) {
+            
+            var nickname
+            
+            
+            
+            
+            if (status === google.maps.GeocoderStatus.OK) {
+                resultsMap.setCenter(results[0].geometry.location);
+                var marker = new google.maps.Marker({
+                map: resultsMap,
+                position: results[0].geometry.location
+      });
+                
+                
+                loc[0] = result[0].geometry.location.lat();
+                loc[1] = result[0].geometry.location.lng();
+                console.log(loc)
+    }       else {
+                alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+}
+    
+}
