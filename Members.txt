@@ -16,5 +16,9 @@ hi
 
 hi there
 
+<<<<<<< HEAD
 
 The world says hello :)
+=======
+HELLO WORLD
+>>>>>>> origin/master
