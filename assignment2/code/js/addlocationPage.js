@@ -7,13 +7,13 @@ function initMap() {
   });
   var geocoder = new google.maps.Geocoder();
 
-  document.getElementById('locationButton').addEventListener('click', function() {
+  document.getElementById('addlocation').addEventListener('click', function() {
     geocodeAddress(geocoder, map);
   });
     
 
     function geocodeAddress(geocoder, resultsMap) {
-        var address = document.getElementById('pac-input').value;
+        var address = document.getElementById('Address').value;
         geocoder.geocode({'address': address}, function(results, status) {
             
             var nickname
@@ -28,9 +28,9 @@ function initMap() {
                 position: results[0].geometry.location
       });
                 
-                
-                loc[0] = result[0].geometry.location.lat();
-                loc[1] = result[0].geometry.location.lng();
+                var loc = [0,0];
+                loc[0] = results[0].geometry.location.lat();
+                loc[1] = results[0].geometry.location.lng();
                 console.log(loc)
     }       else {
                 alert('Geocode was not successful for the following reason: ' + status);
