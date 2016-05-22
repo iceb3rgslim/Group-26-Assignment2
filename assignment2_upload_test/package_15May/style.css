@@ -1,0 +1,46 @@
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+    width: 500px;
+}
+
+/* Map-canvas used by google maps - refer to maps.js  */
+
+#map-canvas {
+  margin-top: 5px;
+  padding: 0;
+  height: 300px;
+  max-width: 500px;
+}
+#map-canvas img {
+  max-width: none !important;
+}
+
+/* Next lines added to present assignment output - refer to viewLocation.html */
+
+#div-1 {
+ position:relative;
+ overflow:auto;
+}
+#div-1a {
+ position:absolute;
+ top:0;
+ right:0;
+ width:50%;
+height:200px;
+ float:left;    
+}
+#div-1b {
+ position:absolute;
+ top:0;
+ left:0;
+ width:50%;
+ float:right;    
+ height:200px;
+}
+
+

@@ -1,0 +1,12 @@
+var testLocations  = {  'melbourne': { latitude: 34.564, longitude: 123.456, weather: 'sunny' },
+                        'sydney' :{ latitude: 47.564, longitude: 63.456, weather: 'raining' },
+                        'brisbane' :  { latitude: 3.24, longitude: 32.66, weather: 'hot' },
+                        'hobart' : { latitude: 55.34, longitude: 53.06, weather: 'cold' } };
+              
+localStorage.setItem('testLocations', JSON.stringify(testLocations));
+              
+var retrievedObject = localStorage.getItem('testLocations');
+
+console.log('retrievedObject: ', JSON.parse(retrievedObject));    
+alert('retrievedObject');
+              
