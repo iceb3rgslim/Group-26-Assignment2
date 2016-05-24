@@ -204,7 +204,7 @@ function getWeather(lat,long, ind){
             retrievedObject[ind].minTempPadding = pad; 
                          
  // Main statement for displaying Favourites output
-<<<<<<< HEAD
+
                   
 
     var idnameforlocation = j.toString();
@@ -212,10 +212,6 @@ function getWeather(lat,long, ind){
     document.getElementById(idnameforlocation).innerHTML=retrievedObject[ind].address;
     document.getElementById(idnameforweathersummary).innerHTML = "Summary: " + retrievedObject[ind].summary + " ,Min Temp(C): " +  retrievedObject[ind].temperatureMin + " ,Max Temp(C): " +  retrievedObject[ind].temperatureMax ; 
     j++;
-=======
-                    
- weatherTextStringGlob += "Location:" +  retrievedObject[ind].address + " Nickname:" +  retrievedObject[ind].nickname + "<br>"+  "Summary:" + retrievedObject[ind].summary + retrievedObject[ind].summPadding + "Min Temp(C):" +  retrievedObject[ind].temperatureMin + retrievedObject[ind].minTempPadding + "......Max Temp(C):"  +  retrievedObject[ind].temperatureMax +  "<br>" ;
->>>>>>> origin/master
    };
         
     
