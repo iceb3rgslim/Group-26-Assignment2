@@ -121,7 +121,7 @@ function LocationWeatherCache()
 function loadLocations()
 // locations previously accepted and stored by AddLocation.html and Map.js
 {
-    
+  // location string to initilise local storage  
   var i;
   weatherTextStringGlob = '';     // Global scope as defined here but populated&printed by "getWeather" function
                                   // which is called repetitvely from a loop in this function. Do not want to
@@ -167,7 +167,7 @@ function getWeather(lat,long, ind){
               retrievedObject[ind].temperatureMin = weatherData.daily.data[ind].temperatureMin;
               retrievedObject[ind].temperatureMax = weatherData.daily.data[ind].temperatureMax; 
                                 
- //Manually make the temp into SI!
+ //Manually make the temp into SI! converting it to celcius
                     
               retrievedObject[ind].temperatureMin =  (retrievedObject[ind].temperatureMin - 32) * (5/9);
               retrievedObject[ind].temperatureMax =  (retrievedObject[ind].temperatureMax - 32) * (5/9);
