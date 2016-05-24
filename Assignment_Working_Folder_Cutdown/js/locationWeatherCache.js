@@ -182,26 +182,6 @@ function getWeather(lat,long, ind){
     var temp_2 = retrievedObject[ind].temperatureMax;                
     temp_2 = temp_2.toFixed(1);               
     retrievedObject[ind].temperatureMax = temp_2;        
-                    
-// Pad Favourites - Address               
-        var addre =   retrievedObject[ind].address;                        
-           var pad = "";  
-           var numSpaces = 28 - Number(addre.length);                          
-          for (k=0; k<= numSpaces ; k++)   
-             {
-                pad = pad +  ".";
-               }
-            retrievedObject[ind].addressPadding = pad;                 
-                    
-//Pad Favourites - Nickname                      
-             var nik =   retrievedObject[ind].nickname;       
-           var pad = "";    
-           var numSpaces = 8 - Number(nik.length); 
-          for (k=0;k<= numSpaces ; k++)   
-             {
-                pad = pad + ".";
-               }
-            retrievedObject[ind].nicPadding = pad; 
                         
  //Pad Favourites - Summary                 
              var summ =   retrievedObject[ind].summary;        
@@ -225,7 +205,7 @@ function getWeather(lat,long, ind){
                          
  // Main statement for displaying Favourites output
                     
- weatherTextStringGlob += "Location:" +  retrievedObject[ind].address + retrievedObject[ind].addressPadding+ "Nickname:" +  retrievedObject[ind].nickname + retrievedObject[ind].nicPadding +  "Summary:" + retrievedObject[ind].summary + retrievedObject[ind].summPadding + "Min Temp(C):" +  retrievedObject[ind].temperatureMin + retrievedObject[ind].minTempPadding + "......Max Temp(C):"  +  retrievedObject[ind].temperatureMax +  "<br>" ;
+ weatherTextStringGlob += "Location:" +  retrievedObject[ind].address + " Nickname:" +  retrievedObject[ind].nickname + "<br>"+  "Summary:" + retrievedObject[ind].summary + retrievedObject[ind].summPadding + "Min Temp(C):" +  retrievedObject[ind].temperatureMin + retrievedObject[ind].minTempPadding + "......Max Temp(C):"  +  retrievedObject[ind].temperatureMax +  "<br>" ;
    };
      document.getElementById("outputArea").innerHTML = weatherTextStringGlob;
   });
