@@ -205,7 +205,7 @@ function getWeather(lat,long, ind){
                          
  // Main statement for displaying Favourites output
                     
- weatherTextStringGlob += "Location:" +  retrievedObject[ind].address + " Nickname:" +  retrievedObject[ind].nickname + "<br>"+  "Summary:" + retrievedObject[ind].summary + retrievedObject[ind].summPadding + "Min Temp(C):" +  retrievedObject[ind].temperatureMin + retrievedObject[ind].minTempPadding + "......Max Temp(C):"  +  retrievedObject[ind].temperatureMax +  "<br>" ;
+ weatherTextStringGlob += "Location: " +  retrievedObject[ind].address + " ....Nickname: " +  retrievedObject[ind].nickname + "<br>"+  "Summary: " + retrievedObject[ind].summary + retrievedObject[ind].summPadding + "Min Temp(C): " +  retrievedObject[ind].temperatureMin + retrievedObject[ind].minTempPadding + "......Max Temp(C): "  +  retrievedObject[ind].temperatureMax +  "<br>" ;
    };
      document.getElementById("outputArea").innerHTML = weatherTextStringGlob;
   });
