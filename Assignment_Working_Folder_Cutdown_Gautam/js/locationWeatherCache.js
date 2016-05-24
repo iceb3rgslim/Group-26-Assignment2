@@ -208,9 +208,11 @@ function getWeather(lat,long, ind){
                   
 
     var idnameforlocation = j.toString();
-    var idnameforweathersummary = "weather" + idnameforlocation
+    var idnameforweathersummary = "weather" + idnameforlocation;
+    var onclickid = "id" + idnameforlocation;
     document.getElementById(idnameforlocation).innerHTML=retrievedObject[ind].address;
     document.getElementById(idnameforweathersummary).innerHTML = "Summary: " + retrievedObject[ind].summary + " ,Min Temp(C): " +  retrievedObject[ind].temperatureMin + " ,Max Temp(C): " +  retrievedObject[ind].temperatureMax ; 
+    document.getElementById(onclickid).onclick = "viewLocation(" + idnameforlocation + ");"; 
     j++;
    };
         
@@ -224,9 +226,9 @@ function getWeather(lat,long, ind){
 
 // Save the singleton locationWeatherCache to Local Storage.
 //
-function saveLocations()
+/*function saveLocations()
 {
  localStorage.setItem('place', 'Melbourne');
  localStorage.setItem('place', 'Sydney');   
-}
+} */
 
